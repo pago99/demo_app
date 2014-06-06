@@ -1,3 +1,4 @@
 class Message < ActiveRecord::Base
-	belongs_to _users
+	belongs_to :users
+	validates :content, length: { maximum: 220 }
 end
